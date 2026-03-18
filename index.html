@@ -271,6 +271,40 @@
             transform: translateY(-2px);
         }
 
+        /* --- Button Layout Wrapper --- */
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap; /* Ensures they stack nicely on very small mobile screens */
+        }
+
+        /* --- LinkedIn Button Styling --- */
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: var(--text);
+            border: 2px solid var(--text);
+            padding: 0.85rem; /* Matches the visual height of the primary button */
+            border-radius: 8px;
+            transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .linkedin-btn:hover {
+            transform: translateY(-2px);
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .linkedin-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor; /* Allows the SVG to match the text/accent color on hover */
+        }
+
         .anthill-wrapper {
             position: absolute;
             left: -12px;
@@ -440,8 +474,17 @@
             <h2>Connect Us</h2>
             <p style="color: var(--text-muted); margin-bottom: 2rem;">Ready to get your business online? Let's talk
                 about your project.</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=antdevelopersindia@gmail.com&su=New%20Website%20Project%20Inquiry"
-                target="_blank" rel="noopener noreferrer" class="btn">Start a Project ➔</a>
+            
+            <div class="action-buttons">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=antdevelopersindia@gmail.com&su=New%20Website%20Project%20Inquiry"
+                    target="_blank" rel="noopener noreferrer" class="btn" style="margin-top: 0;">Start a Project ➔</a>
+                
+                <a href="https://www.linkedin.com/in/ant-dev-3471bb3b5" target="_blank" rel="noopener noreferrer" class="linkedin-btn" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
         </section>
     </div>
 
